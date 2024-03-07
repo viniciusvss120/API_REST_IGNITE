@@ -1,0 +1,12 @@
+# Dependecies
+node_modules
+
+# Databases
+db/*.db
+
+# Envirament
+.env
+.env.test
+
+# Build
+build
