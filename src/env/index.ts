@@ -16,6 +16,7 @@ const envSchema = z.object({
   PORT: z.coerce.number().default(3333)
 })
 
+// Aqui utilizamos o safeParse para verificar as variaveis de ambiente e não jogar logo de cara um erro
 const _env = envSchema.safeParse(process.env)
 
 if(_env.success === false) {
