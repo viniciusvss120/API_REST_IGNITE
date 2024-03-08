@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'test') {
 // Aqui o zod valida se o dado passado na DATABASE_URL, dentro do .env, é uma string.
 const envSchema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('production'),
-  DATABASE_CLIENT: z.enum(['sqlite', 'PG']),
+  DATABASE_CLIENT: z.enum(['sqlite', 'pg']),
   DATABASE_URL: z.string(),
   PORT: z.coerce.number().default(3333)
 })
